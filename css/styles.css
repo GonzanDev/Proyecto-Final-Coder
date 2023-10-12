@@ -1,0 +1,185 @@
+/* Estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Rock Salt', cursive;
+    height: 100%;
+}
+/*header*/
+
+header{
+    background-color: rgba(0, 0, 0, 0.952);
+} 
+
+header nav ul li img{
+    width: 100px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #ff0000;
+    font-size: 25px;
+}
+
+
+
+
+/* Main index*/
+.inicio{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+.inicio .texto-inicio h1{
+color: #ff0000;
+display: flex;
+justify-content: center;
+}
+
+
+.inicio .texto-inicio{
+    color: whitesmoke;
+    font-size: 15px;   
+}
+.inicio .imagen-inicio{
+    width: 3600px;
+    margin-right: 50px;
+}
+
+.inicio .imagen-inicio img{
+    width: 100%;
+    display: block;
+}
+
+
+/*main hisoria*/
+.historia{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+.historia .texto-historia{
+    color: whitesmoke;
+    font-size: 15px; 
+}
+
+.historia .texto-historia h1{
+    color: #ff0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.imagenes-historia{
+    display: flex;
+    flex-direction: column;
+}
+
+.historia .imagenes-historia .imagen-historia img {
+    width: 300px;
+    margin-right: 10px;
+}
+
+/*main discos*/
+
+.discos{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+.discos div{
+    margin: 30px;
+}
+
+/*main conciertos*/
+
+.conciertos{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.925);
+    height: 800px;
+    width: 100%;
+}
+.conciertos div{
+    margin: 30px;
+}
+
+/*main integrantes*/
+
+.integrantes{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.925);
+}
+
+.integrantes img{
+    margin: 10px;
+    width: 300px;
+    height: 500px;
+    border-radius: 5px;
+
+}
+
+.integrantes p{
+    margin: 10px;
+    width: 300px;
+    height: 500px;
+    color: whitesmoke;
+    overflow: scroll;
+}
+
+/*scrollbar*/
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.925);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(66, 64, 64, 0.925);
+    border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.925);
+  }
+
+
+
+
+/*footer*/
+
+footer{
+    margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.952); 
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    bottom: 0;
+}
+
+footer a { 
+    color: #ff0000;
+}
