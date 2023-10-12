@@ -6,14 +6,18 @@
 }
 
 html{
-    font-family: 'Rock Salt', cursive;
     height: 100%;
 }
+
 /*header*/
 
 header{
     background-color: rgba(0, 0, 0, 0.952);
 } 
+
+header .logo{
+    display: none;
+}
 
 header nav ul li img{
     width: 100px;
@@ -24,35 +28,56 @@ header nav ul{
     list-style: none;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0;
 }
 
 header nav ul li a{
     text-decoration: none;
     color: #ff0000;
     font-size: 25px;
+    font-family: 'Rock Salt', cursive;
+}
+
+header #btn_menu{
+    display: none;
+}
+
+header label{
+    display: none;
+}
+
+header label :hover{
+    cursor: pointer;
 }
 
 
 
-
 /* Main index*/
+
+.section{
+    width: 1200px;
+}
 .inicio{
     display: flex;
     flex-direction: row-reverse;
     align-items: start;
     background-color: rgba(0, 0, 0, 0.925);
+    height: 85vh;
 }
 
 .inicio .texto-inicio h1{
 color: #ff0000;
 display: flex;
 justify-content: center;
+font-family: 'Rock Salt', cursive;
+margin: 20px;
 }
 
 
 .inicio .texto-inicio{
     color: whitesmoke;
     font-size: 15px;   
+    font-family: 'Rock Salt', cursive;
 }
 .inicio .imagen-inicio{
     width: 3600px;
@@ -76,6 +101,7 @@ justify-content: center;
 .historia .texto-historia{
     color: whitesmoke;
     font-size: 15px; 
+    font-family: 'Rock Salt', cursive;
 }
 
 .historia .texto-historia h1{
@@ -83,6 +109,7 @@ justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Rock Salt', cursive;
     }
 
 .imagenes-historia{
@@ -93,16 +120,17 @@ justify-content: center;
 .historia .imagenes-historia .imagen-historia img {
     width: 300px;
     margin-right: 10px;
+    margin: 20px;
 }
 
 /*main discos*/
 
 .discos{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    grid-auto-columns: 22rem;
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
     background-color: rgba(0, 0, 0, 0.925);
 }
 .discos div{
@@ -134,20 +162,11 @@ justify-content: center;
     background-color: rgba(0, 0, 0, 0.925);
 }
 
-.integrantes img{
-    margin: 10px;
-    width: 300px;
-    height: 500px;
-    border-radius: 5px;
-
-}
 
 .integrantes p{
-    margin: 10px;
-    width: 300px;
-    height: 500px;
+
     color: whitesmoke;
-    overflow: scroll;
+    font-family: 'Rock Salt', cursive;
 }
 
 /*scrollbar*/
@@ -180,6 +199,88 @@ footer{
     bottom: 0;
 }
 
-footer a { 
-    color: #ff0000;
+/* media queries*/
+@media screen and (max-width: 768px) {
+
+    /*header*/
+
+
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul li a{
+        font-size: 15px; 
+    }
+
+    header .logo{
+        display: block;
+        width: 100px;
+    }
+
+    .logo-hidden{
+        display: none;
+    }
+
+    header label{
+        display: block;
+        position: relative;
+        right: 25px;
+    }
+    header label img{
+        width: 50px;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100px;
+        visibility: hidden;
+        background-color:rgba(0, 0, 0, 0.253);
+        width: 100vw;
+    }
+
+    #btn_menu:checked~.menu{
+        visibility: visible;
+    }
+
+
+    /*index*/
+    .inicio{
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 100vh;
+
+    }
+    .inicio .imagen-inicio{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /*conciertos*/
+
+    .conciertos{
+        flex-direction: column;
+    }
+    .conciertos div iframe{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*historia*/
+
+    .historia{
+        flex-direction: column;
+    }
+    .historia .imagenes-historia{
+        align-items: center;
+    }
+
+    /*integrantes*/
+
+    .integrantes{
+        flex-direction: column;
+    }
+
 }
