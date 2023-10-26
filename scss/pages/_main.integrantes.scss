@@ -1,0 +1,12 @@
+
+.integrantes {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: $background-color_1;
+	p {
+		color: $color_1;
+		font-family: $font-family_1;
+	}
+}

@@ -1,0 +1,13 @@
+
+.conciertos {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: $background-color_1;
+	height: 800px;
+	width: 100%;
+	div {
+		margin: 30px;
+	}
+}

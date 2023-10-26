@@ -1,0 +1,33 @@
+
+/*main hisoria*/
+.historia {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	background-color: $background-color_1;
+	.texto-historia {
+		color: $color_1;
+		font-size: 15px;
+		font-family: $font-family_1;
+		h1 {
+			color: $color_2;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-family: $font-family_1;
+		}
+	}
+	.imagenes-historia {
+		.imagen-historia {
+			img {
+				width: 300px;
+				margin-right: 10px;
+				margin: 20px;
+			}
+		}
+	}
+}
+.imagenes-historia {
+	display: flex;
+	flex-direction: column;
+}
