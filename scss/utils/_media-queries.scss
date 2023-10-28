@@ -46,7 +46,8 @@ $background-color_1: rgba(0, 0, 0, 0.253);
 	}
 	.inicio {
 		flex-direction: column-reverse;
-		align-items: center;
+		overflow-y: auto;
+		overflow-x: hidden;
 		height: 100vh;
 		.imagen-inicio {
 			width: 100%;
