@@ -47,7 +47,6 @@ $background-color_1: rgba(0, 0, 0, 0.253);
 	}
 	.inicio {
 		flex-direction: column-reverse;
-
 		.imagen-inicio {
 			width: 100%;
 			max-width: 500px;
@@ -69,6 +68,12 @@ $background-color_1: rgba(0, 0, 0, 0.253);
 		}
 	}
 	.integrantes {
+		flex-direction: column;
+	}
+
+	.discos{
+		display: flex;
+		align-items: center;
 		flex-direction: column;
 	}
 }

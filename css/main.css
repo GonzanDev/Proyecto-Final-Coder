@@ -227,6 +227,11 @@ footer {
   .integrantes {
     flex-direction: column;
   }
+  .discos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
