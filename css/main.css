@@ -78,7 +78,7 @@ footer {
   flex-direction: row-reverse;
   align-items: start;
   background-color: rgba(0, 0, 0, 0.925);
-  height: 85vh;
+  min-height: 43vw;
 }
 .inicio .texto-inicio {
   margin: 20px;
@@ -206,9 +206,6 @@ footer {
   }
   .inicio {
     flex-direction: column-reverse;
-    overflow-y: auto;
-    overflow-x: hidden;
-    height: 100vh;
   }
   .inicio .imagen-inicio {
     width: 100%;
