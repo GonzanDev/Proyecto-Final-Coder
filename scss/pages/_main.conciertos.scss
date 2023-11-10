@@ -5,8 +5,8 @@
 	flex-direction: row;
 	justify-content: space-around;
 	background-color: $background-color_1;
-	height: 85vh;
 	flex-wrap: wrap;
+	min-height: 43vw;
 	div {
 		margin: 30px;
 	}

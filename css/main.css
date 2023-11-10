@@ -81,6 +81,7 @@ footer {
   height: 85vh;
 }
 .inicio .texto-inicio {
+  margin: 20px;
   color: whitesmoke;
   font-size: 15px;
   font-family: "Rock Salt", cursive;
@@ -111,6 +112,7 @@ footer {
   color: whitesmoke;
   font-size: 15px;
   font-family: "Rock Salt", cursive;
+  margin: 20px;
 }
 .historia .texto-historia h1 {
   color: #ff0000;
@@ -138,8 +140,7 @@ footer {
   grid-auto-columns: 22rem;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   background-color: rgba(0, 0, 0, 0.925);
-  height: 85vh;
-  overflow-y: scroll;
+  min-height: 43vw;
 }
 
 .conciertos {
@@ -148,8 +149,8 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.925);
-  height: 85vh;
   flex-wrap: wrap;
+  min-height: 43vw;
 }
 .conciertos div {
   margin: 30px;
@@ -198,6 +199,7 @@ footer {
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.253);
     width: 100vw;
+    z-index: 1;
   }
   #btn_menu:checked ~ .menu {
     visibility: visible;

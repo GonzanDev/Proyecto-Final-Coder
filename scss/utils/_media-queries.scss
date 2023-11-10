@@ -38,6 +38,7 @@ $background-color_1: rgba(0, 0, 0, 0.253);
 		visibility: hidden;
 		background-color: $background-color_1;
 		width: 100vw;
+		z-index: 1;
 	}
 	#btn_menu {
 		&:checked~.menu {
