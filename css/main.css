@@ -61,7 +61,7 @@ header label :hover {
 /*footer*/
 footer {
   margin-top: auto;
-  background-color: rgba(0, 0, 0, 0.925);
+  background-color: rgba(0, 0, 0, 0.952);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,6 @@ footer {
   flex-direction: row-reverse;
   align-items: start;
   background-color: rgba(0, 0, 0, 0.925);
-  min-height: 43vw;
 }
 .inicio .texto-inicio {
   margin: 20px;
@@ -94,11 +93,11 @@ footer {
   margin: 20px;
 }
 .inicio .imagen-inicio {
-  width: 3600px;
+  width: 100%;
   margin-right: 50px;
 }
 .inicio .imagen-inicio img {
-  width: 100%;
+  height: 85vh;
 }
 
 /*main hisoria*/
@@ -143,7 +142,10 @@ footer {
   min-height: 43vw;
 }
 
-.conciertos {
+html {
+  height: 100%;
+}
+html .conciertos {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -152,7 +154,7 @@ footer {
   flex-wrap: wrap;
   min-height: 43vw;
 }
-.conciertos div {
+html .conciertos div {
   margin: 30px;
 }
 
@@ -209,7 +211,10 @@ footer {
   }
   .inicio .imagen-inicio {
     width: 100%;
-    max-width: 500px;
+  }
+  .inicio .imagen-inicio img {
+    width: 100%;
+    height: 100%;
   }
   .conciertos {
     flex-direction: column;

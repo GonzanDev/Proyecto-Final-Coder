@@ -1,4 +1,7 @@
 
+html{
+	height: 100%;
+
 .conciertos {
 	display: flex;
 	align-items: center;
@@ -10,4 +13,5 @@
 	div {
 		margin: 30px;
 	}
+}
 }
