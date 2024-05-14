@@ -163,7 +163,7 @@ body {
   min-height: 100vh;
 }
 body .integrantes {
-  height: 84.5vh;
+  min-height: 84.5vh;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -177,30 +177,30 @@ body .integrantes p {
 
 /* media queries*/
 @media screen and (max-width: 768px) {
-  header {
+  body header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  header nav ul li a {
+  body header nav ul li a {
     font-size: 15px;
   }
-  header .logo {
+  body header .logo {
     display: block;
     width: 100px;
   }
-  header label {
+  body header label {
     display: block;
     position: relative;
     right: 25px;
   }
-  header label img {
+  body header label img {
     width: 50px;
   }
-  .logo-hidden {
+  body .logo-hidden {
     display: none;
   }
-  .menu {
+  body .menu {
     position: absolute;
     top: 100px;
     visibility: hidden;
@@ -208,36 +208,36 @@ body .integrantes p {
     width: 100vw;
     z-index: 1;
   }
-  #btn_menu:checked ~ .menu {
+  body #btn_menu:checked ~ .menu {
     visibility: visible;
   }
-  .inicio {
+  body .inicio {
     flex-direction: column-reverse;
   }
-  .inicio .imagen-inicio {
+  body .inicio .imagen-inicio {
     width: 100%;
   }
-  .inicio .imagen-inicio img {
-    width: 100%;
-    height: 100%;
-  }
-  .conciertos {
-    flex-direction: column;
-  }
-  .conciertos div iframe {
+  body .inicio .imagen-inicio img {
     width: 100%;
     height: 100%;
   }
-  .historia {
+  body .conciertos {
     flex-direction: column;
   }
-  .historia .imagenes-historia {
+  body .conciertos div iframe {
+    width: 100%;
+    height: 100%;
+  }
+  body .historia {
+    flex-direction: column;
+  }
+  body .historia .imagenes-historia {
     align-items: center;
   }
-  .integrantes {
+  body .integrantes {
     flex-direction: column;
   }
-  .discos {
+  body .discos {
     display: flex;
     align-items: center;
     flex-direction: column;
