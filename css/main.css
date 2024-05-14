@@ -28,7 +28,8 @@ header nav ul li a {
   text-decoration: none;
   color: #ff0000;
   font-size: 25px;
-  font-family: "Rock Salt", cursive;
+  font-family: "Bebas Neue", sans-seri;
+  font-weight: bold;
 }
 header #btn_menu {
   display: none;
@@ -83,13 +84,13 @@ footer {
   margin: 20px;
   color: whitesmoke;
   font-size: 15px;
-  font-family: "Rock Salt", cursive;
+  font-family: "Bebas Neue", sans-seri;
 }
 .inicio .texto-inicio h1 {
   color: #ff0000;
   display: flex;
   justify-content: center;
-  font-family: "Rock Salt", cursive;
+  font-family: "Bebas Neue", sans-seri;
   margin: 20px;
 }
 .inicio .imagen-inicio {
@@ -97,7 +98,7 @@ footer {
   margin-right: 50px;
 }
 .inicio .imagen-inicio img {
-  height: 85vh;
+  height: 84.5vh;
 }
 
 /*main hisoria*/
@@ -110,7 +111,7 @@ footer {
 .historia .texto-historia {
   color: whitesmoke;
   font-size: 15px;
-  font-family: "Rock Salt", cursive;
+  font-family: "Bebas Neue", sans-seri;
   margin: 20px;
 }
 .historia .texto-historia h1 {
@@ -118,7 +119,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Rock Salt", cursive;
+  font-family: "Bebas Neue", sans-seri;
 }
 .historia .imagenes-historia .imagen-historia img {
   width: 300px;
@@ -142,32 +143,36 @@ footer {
   min-height: 43vw;
 }
 
-html {
-  height: 100%;
+body {
+  height: 100vh;
 }
-html .conciertos {
+body .conciertos {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.925);
   flex-wrap: wrap;
-  min-height: 43vw;
+  min-height: 84.5vh;
 }
-html .conciertos div {
+body .conciertos div {
   margin: 30px;
 }
 
-.integrantes {
+body {
+  min-height: 100vh;
+}
+body .integrantes {
+  height: 84.5vh;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.925);
 }
-.integrantes p {
+body .integrantes p {
   color: whitesmoke;
-  font-family: "Rock Salt", cursive;
+  font-family: "Bebas Neue", sans-seri;
 }
 
 /* media queries*/

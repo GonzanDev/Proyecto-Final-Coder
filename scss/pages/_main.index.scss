@@ -1,36 +1,35 @@
-
 /* Main index*/
 
 .section {
-    width: 1200px;
-  }
-  
-  .inicio {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: start;
-    background-color: rgba(0, 0, 0, 0.925);
-  
-    .texto-inicio {
-      h1 {
-        color: #ff0000;
-        display: flex;
-        justify-content: center;
-        font-family: 'Rock Salt', cursive;
-        margin: 20px;
-      }
+  width: 1200px;
+}
+
+.inicio {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: start;
+  background-color: rgba(0, 0, 0, 0.925);
+
+  .texto-inicio {
+    h1 {
+      color: #ff0000;
+      display: flex;
+      justify-content: center;
+      font-family: $font-family_1;
       margin: 20px;
-      color: whitesmoke;
-      font-size: 15px;
-      font-family: 'Rock Salt', cursive;
     }
-  
-    .imagen-inicio {
-      width: 100%;
-      margin-right: 50px;
-  
-      img {
-        height: 85vh;
-      }
+    margin: 20px;
+    color: whitesmoke;
+    font-size: 15px;
+    font-family: $font-family_1;
+  }
+
+  .imagen-inicio {
+    width: 100%;
+    margin-right: 50px;
+
+    img {
+      height: 84.5vh;
     }
   }
+}

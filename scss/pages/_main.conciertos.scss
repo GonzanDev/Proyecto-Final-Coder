@@ -1,17 +1,16 @@
+body {
+  height: 100vh;
 
-html{
-	height: 100%;
-
-.conciertos {
-	display: flex;
-	align-items: center;
-	flex-direction: row;
-	justify-content: space-around;
-	background-color: $background-color_1;
-	flex-wrap: wrap;
-	min-height: 43vw;
-	div {
-		margin: 30px;
-	}
-}
+  .conciertos {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: $background-color_1;
+    flex-wrap: wrap;
+    min-height: 84.5vh;
+    div {
+      margin: 30px;
+    }
+  }
 }
