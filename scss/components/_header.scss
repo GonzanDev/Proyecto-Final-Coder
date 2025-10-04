@@ -1,50 +1,100 @@
-/*header*/
+/* scss/components/_header.scss */
+
+@use "../utils/variables" as *;
+
 header {
-  background-color: rgba(0, 0, 0, 0.952);
+  background-color: $color-dark;
+  display: flex;
+  justify-content: space-between; // Espacia los elementos del menú
+  align-items: center;
+  padding: 15px 40px;
+  position: relative; // Necesario para posicionar el logo central
+  min-height: 80px;
 
-  .logo {
+  /* Ocultamos el checkbox y label de menú móvil en escritorio */
+  #btn_menu,
+  label[for="btn_menu"] {
     display: none;
   }
 
-  nav ul {
-    li {
-      img {
-        width: 100px;
-        animation-name: logo;
-        animation-duration: 2s;
-      }
+  /* LOGO CENTRAL (La "R" del diseño) */
+  .logo-central {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
 
-      a {
+    // Estilos para el contenedor del logo (círculo)
+    border: 2px solid $color-primary; // Borde sutil rojo
+    border-radius: 50%; // Mantiene la forma circular del contenedor
+    padding: 5px; // Espacio interno
+
+    // Efecto de elevación o profundidad (sombra)
+
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateX(-50%) scale(1.05); // Ligeramente más grande al hacer hover
+    }
+
+    .logo {
+      display: block;
+      width: 50px;
+      height: auto;
+      // Asegúrate de que la imagen del logo en sí no tenga su propia sombra que pueda interferir
+      box-shadow: none;
+    }
+  }
+
+  /* MENÚ DE NAVEGACIÓN */
+  .menu {
+    width: 100%;
+
+    ul {
+      display: flex;
+      justify-content: space-between; // Separa Hist/Disc de Conc/Int
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+
+      li a {
+        font-family: $font-title;
+        color: $color-light;
         text-decoration: none;
-        color: #ff0000;
-        font-size: 25px;
-        font-family: $font-family_1;
-        font-weight: bold;
+        text-transform: uppercase;
+        padding: 5px 0px; // Padding horizontal solo para el efecto underline
+        letter-spacing: 1px;
+        position: relative; // Para el pseudo-elemento del underline
+        transition: color 0.2s ease-in-out;
+
+        &.active {
+          color: $color-primary;
+          // Opcional: Mostrar el underline de forma permanente en la página activa
+          &::after {
+            width: 100%;
+          }
+        }
+
+        // Efecto Underline Animado
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 2px; // Posición bajo el texto
+          width: 0%; // Empieza sin ancho
+          height: 2px; // Grosor del underline
+          background-color: $color-primary; // Color rojo
+          transition: width 0.3s ease-in-out; // Animación
+        }
+
+        &:hover {
+          color: $color-primary;
+          &::after {
+            width: 100%; // Se expande al 100% en hover
+          }
+        }
       }
     }
-
-    display: flex;
-    list-style: none;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0;
-  }
-
-  #btn_menu {
-    display: none;
-  }
-
-  label {
-    display: none;
-
-    :hover {
-      cursor: pointer;
-    }
-  }
-}
-
-@keyframes logo {
-  0% {
-    transform: rotate(360deg);
   }
 }

@@ -1,12 +1,124 @@
+/* scss/layouts/_discos.scss */
 
+// Importamos las variables sin prefijo (as *)
+@use "../utils/variables" as *;
+@use "sass:color";
 
-/*main discos*/
 .discos {
-	display: grid;
-	gap: 1rem;
-	grid-auto-flow: dense;
-	grid-auto-columns: 22rem;
-	grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
-	background-color: $background-color_1;
-	min-height: 43vw;
+  background-color: $color-dark;
+  padding: 20px 0 60px 0; // Padding superior e inferior
+
+  // =========================================================
+  // TÍTULO PRINCIPAL (DISCOGRAFÍA)
+  // =========================================================
+  .discos-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 0 20px;
+
+    h1 {
+      font-family: $font-title;
+      font-size: 3.5rem;
+      color: $color-dark; // Letra oscura
+      background: $color-accent; // Fondo amarillo/beige para el resaltado
+      padding: 5px 20px;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
+      // Efecto sutil de sombra en el texto para que destaque
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  // =========================================================
+  // BLOQUES DE ÁLBUMES (album-card)
+  // =========================================================
+  .album-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    margin-bottom: 50px; // Espacio entre cada álbum
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    // Estilo común para la imagen y el borde (marco)
+    .album-image {
+      flex-shrink: 0; // Evita que la imagen se achique
+      max-width: 450px; // Ajusta el tamaño de la imagen
+
+      img {
+        width: 100%;
+        display: block;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    // Estilo común para la información
+    .album-info {
+      flex-grow: 1; // Ocupa el espacio restante
+      color: $color-light;
+      padding: 20px;
+
+      h2 {
+        font-family: $font-title;
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-family: $font-body;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: $color-gray;
+      }
+
+      .spotify-link {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 15px;
+        background-color: $color-primary;
+        color: $color-light;
+        text-decoration: none;
+        font-family: $font-title;
+        border-radius: 4px;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: color.adjust($color-primary, $lightness: -10%);
+        }
+      }
+    }
+  }
+
+  // =========================================================
+  // MODIFICADORES DE LAYOUT Y BORDES ALTERNADOS
+  // =========================================================
+
+  // BLOQUES CON IMAGEN A LA IZQUIERDA (Texto a la derecha)
+  .right-text {
+    border: 4px solid $color-primary; // Borde Rojo
+    flex-direction: row; // Imagen Izquierda, Texto Derecha
+
+    .album-info {
+      h2 {
+        color: $color-primary;
+      }
+    }
+  }
+
+  // BLOQUES CON IMAGEN A LA DERECHA (Texto a la izquierda)
+  .left-text {
+    border: 4px solid $color-accent; // Borde Amarillo/Beige
+    flex-direction: row-reverse; // Imagen Derecha, Texto Izquierda
+
+    .album-info {
+      h2 {
+        color: $color-accent;
+      }
+    }
+  }
 }

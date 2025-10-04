@@ -1,0 +1,27 @@
+/* SCSS GLOBAL: Asegura que la altura se divida correctamente */
+
+body {
+  // CRUCIAL: Debe tener 100vh y ser un contenedor Flexbox
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0; // Evita el scroll inicial del navegador
+  overflow-x: hidden;
+}
+
+header {
+  // Darle una altura fija o limitada
+  height: 80px;
+  // (Ej: 80px, o dejar que el contenido defina su altura mínima)
+  flex-shrink: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  // Darle una altura fija o limitada
+  flex-shrink: 0;
+}

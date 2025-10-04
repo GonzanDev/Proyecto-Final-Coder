@@ -23,75 +23,96 @@
   </head>
   <body>
     <header>
-      <div>
-        <a href="../index.html"
-          ><img class="logo" src="../assets/patricio-rey-logo.png" alt=""
-        /></a>
+      <div class="logo-central">
+        <a href="../index.html">
+          <img
+            class="logo"
+            src="../assets/patricio-rey-logo.png"
+            alt="Logo Patricio Rey"
+          />
+        </a>
       </div>
+
       <input type="checkbox" id="btn_menu" />
-      <label for="btn_menu"
-        ><img src="../assets/icons8-menu.svg" alt=""
-      /></label>
+      <label for="btn_menu">
+        <img src="../assets/icons8-menu.svg" alt="Menú" />
+      </label>
+
       <nav class="menu">
         <ul>
+          <li><a href="./historia.html ">HISTORIA</a></li>
+          <li><a href="./discos.html">DISCOS</a></li>
+
           <li>
-            <a href="./historia.html">Historia</a>
+            <a href="./conciertos.html" class="active">CONCIERTOS</a>
           </li>
-          <li>
-            <a href="./discos.html">Discos</a>
-          </li>
-          <li>
-            <a href="../index.html"
-              ><img
-                class="logo-hidden"
-                src="../assets/patricio-rey-logo.png"
-                alt="Logo redondos"
-            /></a>
-          </li>
-          <li>
-            <a href="./conciertos.html">Conciertos</a>
-          </li>
-          <li>
-            <a href="./integrantes.html">Integrantes</a>
-          </li>
+          <li><a href="./integrantes.html">INTEGRANTES</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="conciertos">
-        <div>
-          <iframe
-            width="450"
-            height="300"
-            src="https://www.youtube.com/embed/bsxf5df6u18?si=EBIN86gAbiq0OsQE"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+        <div class="conciertos-header">
+          <h1>
+            <span class="highlight-main">CONCIERTOS</span>
+            <span class="highlight-secondary">HISTÓRICOS</span>
+          </h1>
+          <p>
+            Reviví la energía de algunos de los shows más emblemáticos de la
+            banda
+          </p>
         </div>
-        <div>
-          <iframe
-            width="450"
-            height="300"
-            src="https://www.youtube.com/embed/JArEXpJdUNY?si=AAKCmGQ8bSajhpSD"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+
+      <div class="conciertos-grid">
+    <div class="concierto-card">
+        <div class="card-inner">
+            <div class="etiqueta-estadio huracan">ESTADIO HURACÁN</div>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/tR6Ph_2_Egw?si=vMLQxy6xkjOYmXFc"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="info-bottom">
+                <p class="fecha">19.DIC.1994</p>
+                <p>Buenos Aires, Argentina</p>
+            </div>
         </div>
-        <div>
-          <iframe
-            width="450"
-            height="300"
-            src="https://www.youtube.com/embed/pcmCZ70D2bY?si=D4CMtC_p1Yiiepnq"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+    </div>
+
+    <div class="concierto-card">
+        <div class="card-inner">
+            <div class="etiqueta-estadio river">ESTADIO LANUS</div>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/cfBsf2bTRX8?si=jGbRS-9Uv1T-81AX"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="info-bottom">
+                <p class="fecha">01.ABR.1992</p>
+                <p>Buenos Aires, Argentina</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="concierto-card">
+        <div class="card-inner">
+            <div class="etiqueta-estadio chateau">ESTADIO CHATEAU CARRERAS</div>
+            <div class="video-container">
+                <iframe
+                    src="https://www.youtube.com/embed/_OO_L2tKP4U?si=OKGpCDG5azgAWlJx"
+                    allowfullscreen
+                ></iframe>
+            </div>
+            <div class="info-bottom">
+                <p class="fecha">04.AGO.2001</p>
+                <p>Córdoba, Argentina</p>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
       </section>
     </main>

@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -30,60 +30,59 @@
     <meta name="keywords" content="redondos, rock nacional, rock, indio" />
     <link rel="icon" type="image/x-icon" href="/assets/patricio-rey-logo.png" />
   </head>
-  <body>
+  <body class="home-page">
+    <div class="hero-video-container">
+      <video src="./assets/video.mp4" autoplay muted loop></video>
+      <div class="video-overlay"></div>
+    </div>
     <header>
-      <img class="logo" src="./assets/patricio-rey-logo.png" alt="" />
+      <div class="logo-central">
+        <a href="../index.html">
+          <img
+            class="logo"
+            src="../assets/patricio-rey-logo.png"
+            alt="Logo Patricio Rey"
+          />
+        </a>
+      </div>
+
       <input type="checkbox" id="btn_menu" />
-      <label for="btn_menu"
-        ><img src="./assets/icons8-menu.svg" alt=""
-      /></label>
+      <label for="btn_menu">
+        <img src="../assets/icons8-menu.svg" alt="Menú" />
+      </label>
+
       <nav class="menu">
         <ul>
-          <li>
-            <a href="./pages/historia.html">Historia</a>
-          </li>
-          <li>
-            <a href="./pages/discos.html">Discos</a>
-          </li>
-          <li>
-            <a href="./index.html"
-              ><img
-                class="logo-hidden"
-                src="./assets/patricio-rey-logo.png"
-                alt="Logo redondos"
-            /></a>
-          </li>
-          <li>
-            <a href="./pages/conciertos.html">Conciertos</a>
-          </li>
-          <li>
-            <a href="./pages/integrantes.html">Integrantes</a>
-          </li>
+          <li><a href="./pages/historia.html ">HISTORIA</a></li>
+          <li><a href="./pages/discos.html">DISCOS</a></li>
+
+          <li><a href="./pages/conciertos.html">CONCIERTOS</a></li>
+          <li><a href="./pages/integrantes.html">INTEGRANTES</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="inicio">
-        <div class="texto-inicio">
-          <h1>Patricio Rey y sus Redonditos de Ricota</h1>
-          <p>
-            Patricio Rey y sus Redonditos de Ricota, también conocidos como Los
-            Redondos, fue un grupo musical de rock argentino formado en La Plata
-            en el año 1976 e integrado, en su mayor parte, por el Indio Solari
-            (voz y composición), Skay Beilinson (guitarra y composición),
-            Semilla Bucciarelli (bajo), Walter Sidotti (batería) y Sergio Dawi
-            (saxofón, armónica y piano). Es considerado uno de las grupos más
-            importantes e influyentes de la historia de la música de Argentina,
-            así como también uno de los más convocantes en términos de
-            audiencia.
-          </p>
-        </div>
-        <div class="imagen-inicio">
-          <img
-            src="./assets/imagen-index.jpg"
-            alt="Foto de todos los integrantes de la banda"
-          />
+    <main class="main-content">
+      <section class="inicio-hero">
+        <div class="texto-hero-box">
+          <div class="texto-inicio">
+            <h1>
+              <span class="highlight-title">PATRICIO REY </span>
+              Y SUS REDONDITOS DE RICOTA
+            </h1>
+
+            <p>
+              Patricio Rey y sus Redonditos de Ricota, también conocidos como
+              Los Redondos, fue un grupo musical de rock argentino formado en La
+              Plata en el año 1976 e integrado, en su mayor parte, por el Indio
+              Solari (voz y composición), Skay Beilinson (guitarra y
+              composición), Semilla Bucciarelli (bajo), Walter Sidotti (batería)
+              y Sergio Dawi (saxofón, armónica y piano). Es considerado uno de
+              los grupos más importantes e influyentes de la historia de la
+              música de Argentina, así como también uno de los más convocantes
+              en términos de audiencia.
+            </p>
+          </div>
         </div>
       </section>
     </main>

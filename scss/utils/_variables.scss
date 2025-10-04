@@ -1,4 +1,12 @@
-$color_1: whitesmoke;
-$color_2: #ff0000;
-$font-family_1: "Bebas Neue", sans-seri;
-$background-color_1: rgba(0, 0, 0, 0.925);
+/* _variables.scss */
+
+// Colores base
+$color-dark: #111111 !default; // ¡AGREGADO!
+$color-light: #f5f5f5 !default; // ¡AGREGADO!
+$color-gray: #aaaaaa !default; // ¡AGREGADO!
+$color-primary: #e63946 !default; // ¡AGREGADO!
+$color-accent: #f5e6c8 !default; // ¡AGREGADO!
+
+// Fuentes
+$font-title: "Bebas Neue", sans-serif !default; // ¡AGREGADO!
+$font-body: "Roboto", sans-serif !default; // ¡AGREGADO!

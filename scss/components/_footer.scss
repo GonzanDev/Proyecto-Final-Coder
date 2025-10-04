@@ -1,9 +1,21 @@
-/*footer*/
+@use "../utils/variables" as *;
+
 footer {
-	margin-top: auto;
-	background-color: rgba(0, 0, 0, 0.952);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	bottom: 0;
+  background: $color-dark;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+
+  a {
+    img {
+      width: 28px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
 }

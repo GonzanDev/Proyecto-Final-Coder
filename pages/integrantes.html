@@ -22,36 +22,29 @@
   </head>
   <body>
     <header>
-      <div>
-        <a href="../index.html"
-          ><img class="logo" src="../assets/patricio-rey-logo.png" alt=""
-        /></a>
+      <div class="logo-central">
+        <a href="../index.html">
+          <img
+            class="logo"
+            src="../assets/patricio-rey-logo.png"
+            alt="Logo Patricio Rey"
+          />
+        </a>
       </div>
+
       <input type="checkbox" id="btn_menu" />
-      <label for="btn_menu"
-        ><img src="../assets/icons8-menu.svg" alt=""
-      /></label>
+      <label for="btn_menu">
+        <img src="../assets/icons8-menu.svg" alt="Menú" />
+      </label>
+
       <nav class="menu">
         <ul>
+          <li><a href="./historia.html ">HISTORIA</a></li>
+          <li><a href="./discos.html">DISCOS</a></li>
+
+          <li><a href="./conciertos.html">CONCIERTOS</a></li>
           <li>
-            <a href="./historia.html">Historia</a>
-          </li>
-          <li>
-            <a href="./discos.html">Discos</a>
-          </li>
-          <li>
-            <a href="../index.html"
-              ><img
-                class="logo-hidden"
-                src="../assets/patricio-rey-logo.png"
-                alt="Logo redondos"
-            /></a>
-          </li>
-          <li>
-            <a href="./conciertos.html">Conciertos</a>
-          </li>
-          <li>
-            <a href="./integrantes.html">Integrantes</a>
+            <a href="./integrantes.html" class="active">INTEGRANTES</a>
           </li>
         </ul>
       </nav>
@@ -59,56 +52,113 @@
 
     <main>
       <section class="integrantes">
-        <div class="card text-bg-dark mb-3" style="width: 18rem">
-          <img
-            src="../assets/imagen-indio.jpg"
-            class="card-img-top"
-            alt="Indio Solari"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Carlos Alberto Solari (Paraná, 17 de enero de 1949) conocido como
-              Indio Solari, es un músico argentino, miembro fundador del grupo
-              Patricio Rey y sus Redonditos de Ricota (también conocidos como
-              Los Redondos).
-            </p>
-          </div>
+        <div class="integrantes-header">
+          <h1>INTEGRANTES</h1>
         </div>
 
-        <div class="card text-bg-dark mb-3" style="width: 18rem">
-          <img
-            src="../assets/imagen-skay.jpg"
-            class="card-img-top"
-            alt="Skay Beilinson"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Eduardo Federico Beilinson, más conocido como Skay Beilinson1​ (La
-              Plata, Provincia de Buenos Aires, Argentina 15 de enero de 1952)
-              es un guitarrista, cantante y compositor argentino, es considerado
-              como un guitarrista esencial del rock de Argentina.​ Reconocido
-              por haber sido miembro y fundador del reconocido grupo musical de
-              Argentina Patricio Rey y sus Redonditos de Ricota, junto al Indio
-              Solari. El pseudónimo Skay surgió gracias a su amiga Marta
-              Minujín.
-            </p>
+        <div class="integrantes-grid">
+          <div class="miembro-card">
+            <div class="info-content">
+              <img src="../assets/imagen-indio.jpg" alt="Indio Solari" />
+              <div class="texto-overlay">
+                <span class="rol">Voz</span>
+                <h3 class="nombre">Indio Solari</h3>
+                <p class="descripcion">
+                  El alma lírica y carismática de la banda. Sus letras profundas
+                  y crípticas definieron a una generación. Una anécdota cuenta
+                  que en los inicios, ensayaban en una carnicería abandonada, lo
+                  que inspiró parte de la estética de la banda.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <div class="card text-bg-dark mb-3" style="width: 18rem">
-          <img
-            src="../assets/imagen-semilla.jpg"
-            class="card-img-top"
-            alt="Semilla Bucciarelli"
-          />
-          <div class="card-body">
-            <p class="card-text">
-              Daniel Fernando "Semilla" Bucciarelli (Villa María, Córdoba,
-              Argentina, 3 de julio de 1959) es un músico y artista plástico
-              argentino2​ reconocido por su notable participación como bajista
-              de Patricio Rey y sus Redonditos de Ricota, en la cual se mantuvo
-              activo desde 1982 hasta la separación de la misma en 2001
-            </p>
+          <div class="miembro-card">
+            <div class="info-content">
+              <img src="../assets/imagen-skay.jpg" alt="Skay Beilinson" />
+              <div class="texto-overlay">
+                <span class="rol">Guitarra</span>
+                <h3 class="nombre">Skay Beilinson</h3>
+                <p class="descripcion">
+                  El arquitecto sonoro de Los Redondos. Sus riffs y punteos son
+                  inmediatamente reconocibles. Se dice que su apodo 'Skay'
+                  proviene de sus días de estudiante de arquitectura, por su
+                  habilidad para dibujar el cielo ('sky').
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="miembro-card">
+            <div class="info-content">
+              <img
+                src="../assets/imagen-semilla.jpeg"
+                alt="Semilla Bucciarelli"
+              />
+              <div class="texto-overlay">
+                <span class="rol">Bajo</span>
+                <h3 class="nombre">Semilla Bucciarelli</h3>
+                <p class="descripcion">
+                  La base rítmica sólida y creativa. Además de músico, es un
+                  reconocido artista plástico, responsable de gran parte de la
+                  gráfica de la banda, incluyendo las icónicas ilustraciones de
+                  los álbumes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="miembro-card">
+            <div class="info-content">
+              <img src="../assets/imagen-walter.jpg" alt="Walter Sidotti" />
+              <div class="texto-overlay">
+                <span class="rol">Batería</span>
+                <h3 class="nombre">Walter Sidotti</h3>
+                <p class="descripcion">
+                  El motor de la banda. Su pulso firme y potente fue crucial en
+                  el sonido en vivo de Los Redondos. Se unió a la banda tras la
+                  partida de Piojo Ábalos, consolidando la formación más
+                  recordada.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="miembro-card">
+            <div class="info-content">
+              <img src="../assets/imagen-sergio.jpg" alt="Sergio Dawi" />
+              <div class="texto-overlay">
+                <span class="rol">Saxofón</span>
+                <h3 class="nombre">Sergio Dawi</h3>
+                <p class="descripcion">
+                  El viento que añadió una capa de color y locura al sonido. Su
+                  saxo es una voz más dentro de la banda, creando atmósferas
+                  inolvidables y solos frenéticos. Es famoso por sus
+                  performances teatrales en vivo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="miembro-card otros-miembros">
+            <div class="info-content">
+              <div class="texto-solo">
+                <h3 class="nombre">Otros</h3>
+                <span class="rol">Miembros Pasados</span>
+                <p class="descripcion">
+                  Piojo Ábalos: Fue uno de los bateristas en los primeros años
+                  del grupo. Guillermo Zárate: Guitarrista que formó parte de la
+                  banda en sus inicios. Conejo Jolivet: Guitarrista que
+                  participó en los primeros discos, como Gulp! y Oktubre. Tito
+                  Fargo: Guitarrista que también participó en los primeros
+                  álbumes de la banda. Fabián Quintiero: Tecladista que grabó y
+                  tocó con Los Redondos durante la época de La Mosca y la Sopa.
+                  Estos, y otros músicos que colaboraron en distintos momentos,
+                  fueron parte fundamental para forjar la leyenda ricotera a lo
+                  largo de su trayectoria.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

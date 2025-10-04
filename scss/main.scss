@@ -1,12 +1,42 @@
-@import "utils/globales.";
-@import "utils/variables";
-@import "components/header";
-@import "components/scrollbar";
-@import "components/footer";
-@import "pages/main.index";
-@import "pages/main.historia";
-@import"pages/main.discos";
-@import"pages/main.conciertos";
-@import "pages/main.integrantes";
-@import "utils/media-queries";
+/* scss/main.scss */
+@use "utils/globales";
 
+// =========================================================
+// 1. CONFIGURACIÓN, VARIABLES Y UTILIDADES
+// =========================================================
+
+// Usamos @forward para exponer las variables a todos los demás parciales
+// sin necesidad de prefijos (asumiendo que variables.scss tiene el !global o es forwardeado correctamente).
+// Reemplaza "utils/variables" con la ruta real a tu _variables.scss
+@forward "utils/variables";
+
+// Estilos que afectan a todo el proyecto (ej: normalize, reset, scrollbar)
+// Usaste el scrollbar globalmente, así que lo colocamos aquí.
+
+// =========================================================
+// 2. COMPONENTES GLOBALES (HEADER & FOOTER)
+// =========================================================
+
+// Estos componentes aparecen en TODAS las páginas
+@use "components/header";
+@use "components/footer";
+@use "components/scrollbar";
+
+// =========================================================
+// 3. LAYOUTS Y PÁGINAS ESPECÍFICAS
+// =========================================================
+
+// Estilos específicos para cada página o estructura de layout
+
+// Página Principal (Index.html)
+@use "pages/main.index";
+
+// Página de Historia (historia.html)
+@use "pages/main.historia" as historia;
+
+// Nuevas páginas del proyecto:
+@use "pages/main.discos" as discos;
+@use "pages/main.conciertos" as conciertos;
+@use "pages/main.integrantes" as integrantes;
+
+// *Si tienes un archivo base para tipografía o mixins, irían en la Sección 1.*

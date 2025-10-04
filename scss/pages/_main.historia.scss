@@ -1,34 +1,173 @@
+/* scss/layouts/_historia.scss */
 
-/*main hisoria*/
+@use "../utils/variables" as *;
+
+// Estilos base para la página de historia
 .historia {
-	display: flex;
-	justify-content: space-between;
-	flex-direction: row-reverse;
-	background-color: $background-color_1;
-	.texto-historia {
-		color: $color_1;
-		font-size: 15px;
-		font-family: $font-family_1;
-		margin: 20px;
-		h1 {
-			color: $color_2;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			font-family: $font-family_1;
-		}
-	}
-	.imagenes-historia {
-		.imagen-historia {
-			img {
-				width: 300px;
-				margin-right: 10px;
-				margin: 20px;
-			}
-		}
-	}
-}
-.imagenes-historia {
-	display: flex;
-	flex-direction: column;
+  background-color: $color-dark; // Fondo negro
+  color: $color-light; // Texto claro
+  padding-bottom: 50px; // Espacio inferior
+
+  // =========================================================
+  // HEADER DE LA PÁGINA (LA HISTORIA)
+  // =========================================================
+  .historia-header {
+    text-align: center;
+    padding: 50px 20px 0;
+
+    h1 {
+      font-family: $font-title;
+      font-size: 4rem;
+      line-height: 1;
+      text-transform: uppercase;
+      color: $color-dark; // El texto es oscuro
+      background: $color-primary; // Fondo del título es el color primario (simula el resaltado amarillo)
+      padding: 5px 20px;
+      display: inline-block; // Para que el background cubra solo el texto
+      margin-bottom: 5px;
+    }
+
+    h2 {
+      font-family: $font-title;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: $color-light;
+    }
+  }
+
+  // =========================================================
+  // SECCIÓN 1: INTRODUCCIÓN Y FOTO BANDA
+  // =========================================================
+  .historia-intro-section {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    align-items: flex-start; // Alinea la parte superior del texto con la imagen
+
+    .texto-intro {
+      flex: 1; // Ocupa la mitad
+      font-family: $font-body;
+      line-height: 1.6;
+      padding-right: 20px;
+
+      p {
+        margin-bottom: 20px;
+        // Estilo para el texto resaltado dentro del párrafo (ROJO)
+        .highlight-text {
+          color: $color-primary;
+          font-weight: bold;
+        }
+      }
+    }
+
+    .imagen-intro {
+      flex: 1; // Ocupa la otra mitad
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        // El diseño original tiene un ligero borde negro en la foto de la banda
+        box-shadow: 0 0 0 10px $color-dark;
+      }
+    }
+  }
+
+  // =========================================================
+  // SECCIÓN DE GALERÍA DE IMÁGENES (CON POSICIONAMIENTO)
+  // =========================================================
+  .historia-galeria {
+    display: grid;
+    // Crea un grid para posicionar las imágenes de forma libre
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    padding: 40px;
+    position: relative;
+    overflow: hidden; // Para asegurar que no haya barras de desplazamiento no deseadas
+
+    .galeria-item {
+      width: 100%;
+      padding: 10px;
+
+      img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        // Aplicar el marco blanco y la rotación
+        border: 10px solid $color-light;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    // Posicionamiento específico para simular el diseño
+    .item-shirt {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+      width: 250px; // Tamaño ajustado para la remera
+      transform: rotate(-5deg) translateX(15%); // Rotación e inclinación
+      z-index: 2;
+    }
+
+    .item-indio {
+      grid-column: 2 / 4;
+      grid-row: 1 / 3;
+      width: 450px; // Tamaño ajustado para la foto central
+      transform: translateY(-50px) translateX(-5%); // Levanta un poco y mueve a la izquierda
+      z-index: 3; // Lo pone encima de los demás
+    }
+
+    .item-skay {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      width: 250px; // Tamaño ajustado para la foto de Skay
+      transform: rotate(5deg) translateX(-15%); // Rotación e inclinación
+      z-index: 2;
+    }
+  }
+
+  // =========================================================
+  // SECCIÓN 2: EL LEGADO
+  // =========================================================
+  .historia-legado {
+    display: flex;
+    flex-direction: row-reverse; // Imagen a la derecha, texto a la izquierda
+    gap: 40px;
+    padding: 40px;
+    margin-top: 50px; // Separación de la galería
+
+    .titulo-resaltado {
+      // Estilo para el título "EL LEGADO"
+      font-family: $font-title;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      color: $color-dark;
+      background: $color-primary; // Fondo rojo/amarillo
+      padding: 5px 15px;
+      display: inline-block;
+      margin-bottom: 20px;
+      // Se puede usar posicionamiento absoluto o grid si el diseño es más complejo
+    }
+
+    .texto-legado {
+      flex: 1;
+      font-family: $font-body;
+      line-height: 1.6;
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .imagen-legado {
+      flex: 1;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        // Efecto de rotación sutil para la imagen de "El Legado"
+        transform: rotate(-3deg);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
 }

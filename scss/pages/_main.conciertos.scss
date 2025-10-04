@@ -1,16 +1,190 @@
-body {
-  height: 100vh;
+/* scss/layouts/_conciertos.scss */
 
-  .conciertos {
-    display: flex;
+@use "../utils/variables" as *;
+
+.conciertos {
+  background-color: $color-dark;
+  min-height: 84.5vh;
+  padding: 90px 0;
+
+  // =========================================================
+  // TÍTULO PRINCIPAL (CONCIERTOS HISTÓRICOS) - Se mantiene
+  // =========================================================
+  .conciertos-header {
+    text-align: center;
+    margin-bottom: 50px;
+
+    h1 {
+      font-family: $font-title;
+      font-size: 4rem;
+      font-weight: 600;
+      line-height: 1;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+
+      .highlight-main {
+        background: $color-primary;
+        color: $color-dark;
+        padding: 5px 15px;
+        display: inline-block;
+        transform: skewX(-12deg);
+      }
+
+      .highlight-secondary {
+        background: $color-accent;
+        color: $color-dark;
+        padding: 5px 15px;
+        display: inline-block;
+        transform: skewX(-12deg);
+      }
+    }
+
+    p {
+      color: $color-light;
+      font-size: 1.5rem;
+      margin: 10px;
+    }
+  }
+
+  // =========================================================
+  // GRUPO DE CARDS DE CONCIERTOS - GRID CON DESFASE CENTRAL
+  // =========================================================
+  .conciertos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    max-width: 90%;
+    margin: 0 auto;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: $background-color_1;
-    flex-wrap: wrap;
-    min-height: 84.5vh;
-    div {
-      margin: 30px;
+
+    // Desfase para el video del medio
+    .concierto-card:nth-child(2) {
+      margin-top: 50px;
+    }
+  }
+
+  // =========================================================
+  // TARJETAS INDIVIDUALES (concierto-card)
+  // =========================================================
+  .concierto-card {
+    background-color: transparent;
+    border: none;
+    overflow: visible;
+    position: relative; // Anclaje principal
+
+    .card-inner {
+      position: relative;
+      transition: transform 0.4s;
+      background-color: $color-dark;
+
+      // Estilo punk base (INCLINACIÓN ÚNICA)
+      transform: skewX(-1.5deg) rotateZ(1deg);
+
+      &:hover {
+        transform: skewX(0deg) rotateZ(0deg) scale(1.03);
+      }
+    }
+
+    // 1. Contenedor de video (gestiona el marco y la compensación)
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      overflow: hidden;
+      background-color: $color-dark;
+
+      // MARCO DOBLE
+      box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-primary,
+        0 0 0 12px $color-dark;
+
+      transition: transform 0.4s, box-shadow 0.4s;
+
+      // COMPENSACIÓN INVERSA (Elimina la inclinación del .card-inner)
+      transform: skewX(1.5deg) rotateZ(-1deg) scale(1);
+
+      .card-inner:hover & {
+        transform: skewX(0deg) rotateZ(0deg) scale(1);
+        box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-accent,
+          0 0 0 12px $color-dark;
+      }
+
+      iframe,
+      video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: $color-dark;
+        z-index: 1;
+      }
+    }
+
+    // 3. Etiqueta lateral (ESTADIO) - POSICIÓN DENTRO DE CARD-INNER
+    .card-inner > .etiqueta-estadio {
+      position: fixed;
+
+      // Posicionamiento en la esquina superior derecha del .card-inner
+      top: -1px;
+      right: 12px;
+
+      // Ajuste de altura: 100% de la altura del .card-inner menos el alto del .info-bottom y su margin-top.
+      // 72px es el valor que debería funcionar mejor.
+      height: calc(100% - 86px);
+
+      // COMPENSACIÓN FINAL para que la etiqueta quede recta y en el borde.
+      // 1. Desplazamos 12px a la derecha (ancho del marco externo)
+      // 2. Aplicamos la misma COMPENSACIÓN INVERSA del video para enderezarla.
+      // 3. Aplicamos un pequeño ajuste vertical (-3px) para compensar el inicio de la rotación.
+      transform: translate(12px, -7px) skewX(1.5deg) rotateZ(-1deg);
+      transform-origin: 0% 0%;
+
+      // Estilos visuales
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      background-color: $color-primary;
+      color: $color-dark;
+      padding: 5px 15px;
+      font-family: $font-title;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      z-index: 10;
+      line-height: 1.1;
+
+      // Rotación del texto dentro de la etiqueta
+      span {
+        display: block;
+        transform: rotate(180deg);
+        padding: 10px 0;
+      }
+    }
+
+    // 2. Información del evento (Fecha, Ciudad) - ESTILO CORRECTO
+    .info-bottom {
+      background-color: rgba($color-dark, 0.9);
+      padding: 10px;
+      color: $color-light;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+      margin-top: 15px;
+
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+      .fecha {
+        font-family: $font-title;
+        font-size: 1.5rem;
+        color: $color-accent;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
     }
   }
 }
