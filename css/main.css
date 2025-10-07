@@ -1089,6 +1089,10 @@ footer a img:hover {
   }
   .discos .discos-header {
     margin: 40px 0;
+    padding: 0 10px;
+  }
+  .discos .discos-header h1 {
+    font-size: 3rem;
   }
   .discos .album-card {
     flex-direction: column;
