@@ -1091,9 +1091,6 @@ footer a img:hover {
     margin: 40px 0;
     padding: 0 10px;
   }
-  .discos .discos-header h1 {
-    font-size: 3rem;
-  }
   .discos .album-card {
     flex-direction: column;
     text-align: left;
@@ -1132,9 +1129,6 @@ footer a img:hover {
   /* ======================================================= */
   .integrantes {
     padding: 50px 15px;
-  }
-  .integrantes .integrantes-header h1 {
-    font-size: 3rem;
   }
   .integrantes .integrantes-grid {
     gap: 50px;
