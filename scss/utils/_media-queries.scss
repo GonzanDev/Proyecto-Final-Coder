@@ -3,9 +3,9 @@
 @use "../utils/variables" as *;
 
 // =========================================================
-// BREAKPOINT 1: TABLETS Y MÓVILES GRANDES (Hasta 960px)
+// BREAKPOINT 1: TABLETS Y MÓVILES GRANDES (Hasta 768px)
 // =========================================================
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   /* ======================================================= */
   /* ============== HEADER Y NAVEGACIÓN MÓVIL ============== */
   /* ======================================================= */
@@ -107,31 +107,128 @@
   /* ================ PÁGINA DE HISTORIA =================== */
   /* ======================================================= */
   .historia {
-    // ... (tus estilos de historia)
+    .historia-intro-section,
+    .legado-content {
+      flex-direction: column;
+      gap: 30px;
+      .texto-intro,
+      .texto-legado {
+        text-align: left;
+        width: 90%;
+      }
+    }
+
+    .historia-intro-section .imagen-intro,
+    .historia-legado .imagen-legado {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .historia-galeria {
+      height: auto;
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 80px;
+      padding: 0 10%;
+      .galeria-item {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-color: $color-accent;
+        &::before {
+          display: none;
+        }
+      }
+      .item-shirt {
+        transform: rotate(-8deg);
+        align-self: flex-start;
+        width: 90%;
+      }
+      .item-indio {
+        transform: rotate(2deg);
+        z-index: 2;
+        width: 100%;
+      }
+      .item-skay {
+        transform: rotate(8deg);
+        align-self: flex-end;
+        width: 90%;
+      }
+    }
+
+    .legado-header {
+      align-self: center;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
   }
 
   /* ======================================================= */
   /* ================ PÁGINA DE CONCIERTOS ================= */
   /* ======================================================= */
+
   .conciertos {
-    // ... (tus estilos de conciertos)
+    // 1. Reducimos el padding superior para acercar el título al header.
+    padding-top: 30px;
+
+    .conciertos-header {
+      h1 {
+        flex-direction: column; // Mantenemos el apilado vertical.
+        gap: 5px; // Un pequeño espacio entre las palabras.
+
+        // 2. Centramos los elementos del título horizontalmente.
+        align-items: center;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    // --- La grilla de conciertos ---
+    .conciertos-grid {
+      // 1. ¡La clave! Convertimos la grilla a una sola columna.
+      grid-template-columns: 1fr;
+      gap: 50px; // Espacio vertical entre las tarjetas
+
+      // 2. Quitamos el margen que desfasaba la tarjeta del medio.
+      .concierto-card:nth-child(2) {
+        margin-top: 0;
+      }
+    }
+
+    // --- Las tarjetas ---
+    .concierto-card {
+      // 3. Simplificamos el efecto hover para que funcione mejor en táctil.
+      &:hover {
+        transform: scale(1.02); // Solo un pequeño zoom al tocar.
+      }
+    }
   }
 
   /* ======================================================= */
-  /* ============== PÁGINAS DE DISCOS ====================== */
+  /* ============== PÁGINAS DE DISCOS ============== */
   /* ======================================================= */
   .discos {
+    // Estilos específicos para el título de la página de discos
     padding-left: 15px;
     padding-right: 15px;
     .discos-header {
       margin: 40px 0;
     }
+  }
+
+  .discos {
+    // Reglas compartidas para las tarjetas
     .album-card {
       flex-direction: column;
       text-align: left;
       margin-bottom: 40px;
       padding: 25px;
       gap: 30px;
+
       .album-image {
         max-width: 100%;
         margin: 0;
@@ -139,6 +236,7 @@
           box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-accent;
         }
       }
+
       .album-info {
         padding: 0;
         width: 100%;
@@ -161,8 +259,15 @@
   /* ======================================================= */
   /* ================ PÁGINA DE INTEGRANTES ================ */
   /* ======================================================= */
+  /* ======================================================= */
+  /* ================ PÁGINA DE INTEGRANTES ================ */
+  /* ======================================================= */
   .integrantes {
     padding: 50px 15px;
+
+    .integrantes-header h1 {
+      font-size: 3rem;
+    }
 
     .integrantes-grid {
       // Tu grid con auto-fit ya es responsive. En pantallas chicas,
@@ -177,6 +282,7 @@
       transform: translateY(-10px) !important; // Solo levantamos la tarjeta
 
       .info-content {
+        transform: none !important; // Quitamos transformaciones internas
         img {
           transform: scale(1.03) !important; // Solo un zoom sutil
         }
@@ -189,10 +295,14 @@
 // BREAKPOINT 2: MÓVILES PEQUEÑOS (Hasta 480px)
 // =========================================================
 @media screen and (max-width: 480px) {
+  /* ======================================================= */
+  /* ======== AJUSTES FINOS PARA MÓVILES PEQUEÑOS ========== */
+  /* ======================================================= */
   .home-page .texto-hero-box {
     padding: 20px;
     border-width: 3px;
   }
+
   .home-page .texto-inicio h1 {
     font-size: 2.8rem;
     line-height: 1;

@@ -910,7 +910,7 @@ footer a img:hover {
 }
 
 /* scss/utils/_media-queries.scss */
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   /* ======================================================= */
   /* ============== HEADER Y NAVEGACIÓN MÓVIL ============== */
   /* ======================================================= */
@@ -1000,11 +1000,88 @@ footer a img:hover {
   /* ======================================================= */
   /* ================ PÁGINA DE HISTORIA =================== */
   /* ======================================================= */
+  .historia .historia-intro-section,
+  .historia .legado-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .historia .historia-intro-section .texto-intro,
+  .historia .historia-intro-section .texto-legado,
+  .historia .legado-content .texto-intro,
+  .historia .legado-content .texto-legado {
+    text-align: left;
+    width: 90%;
+  }
+  .historia .historia-intro-section .imagen-intro,
+  .historia .historia-legado .imagen-legado {
+    width: 100%;
+    max-width: 500px;
+  }
+  .historia .historia-galeria {
+    height: auto;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    padding: 0 10%;
+  }
+  .historia .historia-galeria .galeria-item {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-color: #f5e6c8;
+  }
+  .historia .historia-galeria .galeria-item::before {
+    display: none;
+  }
+  .historia .historia-galeria .item-shirt {
+    transform: rotate(-8deg);
+    align-self: flex-start;
+    width: 90%;
+  }
+  .historia .historia-galeria .item-indio {
+    transform: rotate(2deg);
+    z-index: 2;
+    width: 100%;
+  }
+  .historia .historia-galeria .item-skay {
+    transform: rotate(8deg);
+    align-self: flex-end;
+    width: 90%;
+  }
+  .historia .legado-header {
+    align-self: center;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
   /* ======================================================= */
   /* ================ PÁGINA DE CONCIERTOS ================= */
   /* ======================================================= */
+  .conciertos {
+    padding-top: 30px;
+  }
+  .conciertos .conciertos-header h1 {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  .conciertos .conciertos-header p {
+    font-size: 1.2rem;
+  }
+  .conciertos .conciertos-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .conciertos .conciertos-grid .concierto-card:nth-child(2) {
+    margin-top: 0;
+  }
+  .conciertos .concierto-card:hover {
+    transform: scale(1.02);
+  }
   /* ======================================================= */
-  /* ============== PÁGINAS DE DISCOS ====================== */
+  /* ============== PÁGINAS DE DISCOS ============== */
   /* ======================================================= */
   .discos {
     padding-left: 15px;
@@ -1046,8 +1123,14 @@ footer a img:hover {
   /* ======================================================= */
   /* ================ PÁGINA DE INTEGRANTES ================ */
   /* ======================================================= */
+  /* ======================================================= */
+  /* ================ PÁGINA DE INTEGRANTES ================ */
+  /* ======================================================= */
   .integrantes {
     padding: 50px 15px;
+  }
+  .integrantes .integrantes-header h1 {
+    font-size: 3rem;
   }
   .integrantes .integrantes-grid {
     gap: 50px;
@@ -1056,11 +1139,17 @@ footer a img:hover {
   .integrantes .miembro-card:hover {
     transform: translateY(-10px) !important;
   }
+  .integrantes .miembro-card:hover .info-content {
+    transform: none !important;
+  }
   .integrantes .miembro-card:hover .info-content img {
     transform: scale(1.03) !important;
   }
 }
 @media screen and (max-width: 480px) {
+  /* ======================================================= */
+  /* ======== AJUSTES FINOS PARA MÓVILES PEQUEÑOS ========== */
+  /* ======================================================= */
   .home-page .texto-hero-box {
     padding: 20px;
     border-width: 3px;
