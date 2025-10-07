@@ -1,85 +1,203 @@
-$background-color_1: rgba(0, 0, 0, 0.253);
+/* scss/utils/_media-queries.scss */
 
-/* media queries*/
+@use "../utils/variables" as *;
 
-@media screen and (max-width: 768px) {
-  body {
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      nav {
-        ul {
-          li {
-            a {
-              font-size: 15px;
-            }
+// =========================================================
+// BREAKPOINT 1: TABLETS Y MÓVILES GRANDES (Hasta 960px)
+// =========================================================
+@media screen and (max-width: 960px) {
+  /* ======================================================= */
+  /* ============== HEADER Y NAVEGACIÓN MÓVIL ============== */
+  /* ======================================================= */
+  header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background-color: $color-dark;
+    margin-bottom: -1px;
+
+    label[for="btn_menu"] {
+      display: block;
+      order: 1;
+      cursor: pointer;
+      img {
+        width: 40px;
+      }
+    }
+
+    .logo-central {
+      order: 2;
+      flex-grow: 1;
+      img.logo {
+        width: 40px;
+        display: block;
+      }
+    }
+
+    nav.menu {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background-color: rgba(15, 15, 15, 0.7);
+      backdrop-filter: blur(10px);
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      visibility: hidden;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out,
+        visibility 0.4s ease-out;
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        li {
+          margin: 10px 0;
+          a {
+            font-size: 1.2rem;
           }
         }
       }
-      .logo {
-        display: block;
-        width: 100px;
-      }
-      label {
-        display: block;
-        position: relative;
-        right: 25px;
+    }
+
+    #btn_menu:checked ~ nav.menu {
+      max-height: 400px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  /* ======================================================= */
+  /* ============== PÁGINA DE INICIO (HOME) ================ */
+  /* ======================================================= */
+  .home-page main {
+    padding: 20px;
+    min-height: calc(100vh - 160px);
+  }
+
+  .home-page .texto-hero-box {
+    transform: none;
+    padding: 25px;
+    .texto-inicio {
+      transform: none;
+    }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  .home-page .texto-inicio h1 {
+    font-size: 3.5rem;
+    span.highlight-title {
+      padding: 4px 12px;
+      transform: skewX(-3deg);
+    }
+  }
+
+  .home-page .texto-inicio p {
+    font-size: 0.95rem;
+  }
+
+  /* ======================================================= */
+  /* ================ PÁGINA DE HISTORIA =================== */
+  /* ======================================================= */
+  .historia {
+    // ... (tus estilos de historia)
+  }
+
+  /* ======================================================= */
+  /* ================ PÁGINA DE CONCIERTOS ================= */
+  /* ======================================================= */
+  .conciertos {
+    // ... (tus estilos de conciertos)
+  }
+
+  /* ======================================================= */
+  /* ============== PÁGINAS DE DISCOS ====================== */
+  /* ======================================================= */
+  .discos {
+    padding-left: 15px;
+    padding-right: 15px;
+    .discos-header {
+      margin: 40px 0;
+    }
+    .album-card {
+      flex-direction: column;
+      text-align: left;
+      margin-bottom: 40px;
+      padding: 25px;
+      gap: 30px;
+      .album-image {
+        max-width: 100%;
+        margin: 0;
         img {
-          width: 50px;
+          box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-accent;
         }
       }
-    }
-    .logo-hidden {
-      display: none;
-    }
-    .menu {
-      position: absolute;
-      top: 100px;
-      visibility: hidden;
-      background-color: $background-color_1;
-      width: 100vw;
-      z-index: 1;
-    }
-    #btn_menu {
-      &:checked ~ .menu {
-        visibility: visible;
-      }
-    }
-    .inicio {
-      flex-direction: column-reverse;
-      .imagen-inicio {
+      .album-info {
+        padding: 0;
         width: 100%;
+        text-align: left;
+        h2 {
+          color: $color-accent !important;
+          font-size: 2rem;
+        }
+        p {
+          text-align: left;
+        }
+        .spotify-link {
+          display: inline-block;
+          margin: 15px 0 0 0;
+        }
+      }
+    }
+  }
 
+  /* ======================================================= */
+  /* ================ PÁGINA DE INTEGRANTES ================ */
+  /* ======================================================= */
+  .integrantes {
+    padding: 50px 15px;
+
+    .integrantes-grid {
+      // Tu grid con auto-fit ya es responsive. En pantallas chicas,
+      // automáticamente pasará a una columna y se centrará.
+      // Solo ajustamos los espacios para que se vea mejor.
+      gap: 50px;
+      padding: 0 10px;
+    }
+
+    // Simplificamos el hover para una mejor experiencia táctil
+    .miembro-card:hover {
+      transform: translateY(-10px) !important; // Solo levantamos la tarjeta
+
+      .info-content {
         img {
-          width: 100%;
-          height: 100%;
+          transform: scale(1.03) !important; // Solo un zoom sutil
         }
       }
     }
-    .conciertos {
-      flex-direction: column;
-      div {
-        iframe {
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-    .historia {
-      flex-direction: column;
-      .imagenes-historia {
-        align-items: center;
-      }
-    }
-    .integrantes {
-      flex-direction: column;
-    }
+  }
+} // <-- FIN DEL BREAKPOINT PRINCIPAL
 
-    .discos {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+// =========================================================
+// BREAKPOINT 2: MÓVILES PEQUEÑOS (Hasta 480px)
+// =========================================================
+@media screen and (max-width: 480px) {
+  .home-page .texto-hero-box {
+    padding: 20px;
+    border-width: 3px;
+  }
+  .home-page .texto-inicio h1 {
+    font-size: 2.8rem;
+    line-height: 1;
+    span.highlight-title {
+      padding: 3px 10px;
     }
   }
 }

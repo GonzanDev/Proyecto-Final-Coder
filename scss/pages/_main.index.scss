@@ -64,14 +64,13 @@
   // Aseguramos que el texto del header tenga buen contraste
   header {
     .menu ul li a {
-      color: $color-light; // Asegura que los enlaces sean visibles sobre el fondo oscuro del video
+      // Asegura que los enlaces sean visibles sobre el fondo oscuro del video
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); // Añade una pequeña sombra al texto para contraste
     }
   }
 
   main {
     position: relative;
-    z-index: 10;
     min-height: 84.5vh;
     display: flex;
     justify-content: center;

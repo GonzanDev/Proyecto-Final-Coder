@@ -40,3 +40,5 @@
 @use "pages/main.integrantes" as integrantes;
 
 // *Si tienes un archivo base para tipografía o mixins, irían en la Sección 1.*
+
+@use "utils/media-queries";

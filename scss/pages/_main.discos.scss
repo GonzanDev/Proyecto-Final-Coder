@@ -25,15 +25,12 @@
       display: inline-block;
       text-transform: uppercase;
       letter-spacing: 2px;
-
-      // Estilo Redondo/Punk: Pequeña inclinación para dar carácter
       transform: skewX(-12deg);
     }
   }
 
   // =========================================================
   // BLOQUES DE ÁLBUMES (album-card)
-  // Se añade un fondo sutil y una sombra para destacar el bloque completo
   // =========================================================
   .album-card {
     display: flex;
@@ -44,23 +41,22 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-
-    background-color: #1a1a1a; /* Fondo sutil para destacar el bloque */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad a la tarjeta completa */
+    background-color: #1a1a1a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: translateY(-5px); /* Efecto hover sutil */
+      transform: translateY(-5px);
     }
 
     .album-image {
       flex-shrink: 0;
-      max-width: 400px; /* Tamaño ligeramente reducido para mejor composición */
+      max-width: 400px;
 
       img {
         width: 100%;
         display: block;
-        box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-primary; /* Marco interno para las portadas */
+        box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-primary;
       }
     }
 
@@ -71,7 +67,7 @@
 
       h2 {
         font-family: $font-title;
-        font-size: 2.5rem; /* Título más grande (estilo Bebas Neue) */
+        font-size: 2.5rem;
         text-transform: uppercase;
         margin-bottom: 10px;
         line-height: 1;
@@ -89,7 +85,7 @@
         margin-top: 20px;
         padding: 10px 20px;
         background-color: $color-primary;
-        color: $color-dark; /* Texto oscuro sobre el botón rojo */
+        color: $color-dark;
         text-decoration: none;
         font-family: $font-title;
         font-size: 1.1rem;
@@ -108,20 +104,15 @@
   // =========================================================
   // MODIFICADORES DE LAYOUT Y BORDES ALTERNADOS
   // =========================================================
-
-  // BLOQUES CON IMAGEN A LA IZQUIERDA (Texto a la derecha)
   .right-text {
     border: 4px solid $color-primary;
     flex-direction: row;
 
-    .album-info {
-      h2 {
-        color: $color-primary;
-      }
+    .album-info h2 {
+      color: $color-primary;
     }
   }
 
-  // BLOQUES CON IMAGEN A LA DERECHA (Texto a la izquierda)
   .left-text {
     border: 4px solid $color-accent;
     flex-direction: row-reverse;
@@ -130,15 +121,16 @@
       h2 {
         color: $color-accent;
       }
-      // Para alinear el texto a la izquierda en los bloques invertidos
       text-align: right;
+
       p,
       a {
         text-align: right;
-        margin-left: auto; /* Centra elementos inline-block como el link */
+        margin-left: auto;
       }
+
       .spotify-link {
-        margin-right: 0; /* Asegura que el botón se alinee a la derecha */
+        margin-right: 0;
       }
     }
   }
@@ -146,73 +138,11 @@
   // =========================================================
   // ESTILOS ESPECIALES (Live, Doble)
   // =========================================================
-
-  // Estilo especial para álbumes en vivo
   .album-card.album-live {
     border: 4px solid $color-light;
 
     .album-info h2 {
       color: $color-light;
-    }
-  }
-
-  // Estilo para el álbum doble (Lobo Suelto / Cordero Atado)
-  .album-card.album-doble {
-    margin-bottom: 0; /* Quita el margen inferior para el primer disco del doble */
-
-    /* Selecciona Lobo suelto (el primero del par 1993) */
-    &:nth-of-type(7) {
-      border-bottom: none;
-    }
-
-    /* Selecciona Cordero atado (el segundo del par 1993) */
-    &:nth-of-type(8) {
-      border-top: none;
-      margin-bottom: 50px; /* Devuelve el margen al último disco del doble */
-    }
-  }
-
-  // =========================================================
-  // MEDIA QUERY: Responsividad para Tablet/Móvil
-  // =========================================================
-  @media (max-width: 900px) {
-    .discos .album-card {
-      flex-direction: column !important; /* APILAMIENTO VERTICAL */
-      text-align: center;
-      padding: 20px;
-      margin-bottom: 40px;
-      gap: 20px;
-
-      &:nth-of-type(7),
-      &:nth-of-type(8) {
-        margin-bottom: 40px; /* Asegura el margen adecuado en móvil para el doble */
-        border-top: 4px solid $color-primary !important;
-        border-bottom: 4px solid $color-primary !important;
-      }
-    }
-
-    .discos .album-card .album-image {
-      max-width: 70%;
-      margin: 0 auto;
-      img {
-        box-shadow: 0 0 0 4px $color-dark, 0 0 0 8px $color-primary; /* Asegura el marco */
-      }
-    }
-
-    .discos .album-card .album-info {
-      padding: 0;
-      text-align: center; /* Centra el texto */
-
-      h2,
-      p {
-        text-align: center;
-      }
-
-      .spotify-link {
-        display: block;
-        width: fit-content;
-        margin: 15px auto 0 auto; /* Centra el botón */
-      }
     }
   }
 }
