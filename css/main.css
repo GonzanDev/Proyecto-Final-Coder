@@ -23,7 +23,6 @@ footer {
   flex-shrink: 0;
 }
 
-/* _variables.scss */
 /* scss/components/_header.scss */
 header {
   background-color: #111111;
@@ -972,30 +971,16 @@ footer a img:hover {
   /* ======================================================= */
   /* ============== PÁGINA DE INICIO (HOME) ================ */
   /* ======================================================= */
-  .home-page main {
-    padding: 20px;
-    min-height: calc(100vh - 160px);
-  }
   .home-page .texto-hero-box {
-    transform: none;
-    padding: 25px;
-  }
-  .home-page .texto-hero-box .texto-inicio {
-    transform: none;
-  }
-  .home-page .texto-hero-box:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-width: 3px;
   }
   .home-page .texto-inicio h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
+    line-height: 1;
   }
   .home-page .texto-inicio h1 span.highlight-title {
-    padding: 4px 12px;
-    transform: skewX(-3deg);
-  }
-  .home-page .texto-inicio p {
-    font-size: 0.95rem;
+    padding: 3px 10px;
   }
   /* ======================================================= */
   /* ================ PÁGINA DE HISTORIA =================== */
@@ -1142,22 +1127,6 @@ footer a img:hover {
   }
   .integrantes .miembro-card:hover .info-content img {
     transform: scale(1.03) !important;
-  }
-}
-@media screen and (max-width: 480px) {
-  /* ======================================================= */
-  /* ======== AJUSTES FINOS PARA MÓVILES PEQUEÑOS ========== */
-  /* ======================================================= */
-  .home-page .texto-hero-box {
-    padding: 20px;
-    border-width: 3px;
-  }
-  .home-page .texto-inicio h1 {
-    font-size: 2.8rem;
-    line-height: 1;
-  }
-  .home-page .texto-inicio h1 span.highlight-title {
-    padding: 3px 10px;
   }
 }
 

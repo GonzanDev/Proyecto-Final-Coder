@@ -61,9 +61,6 @@
   .concierto-card {
     position: relative; // Punto de anclaje para todo lo que está adentro.
 
-    // --- CLAVE 1: La animación ahora vive en la tarjeta principal ---
-
-    // El fondo inclinado que le da el estilo 'punk'
     &::before {
       transform: skewX(-1deg) rotateZ(0.5deg);
     }
@@ -86,7 +83,6 @@
       }
 
       &:hover {
-        // Levantamos, agrandamos y rotamos ligeramente TODA la tarjeta.
         transform: scale(1.02);
       }
     }

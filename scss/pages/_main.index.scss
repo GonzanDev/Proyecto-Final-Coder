@@ -30,7 +30,7 @@
     }
   }
 
-  // Overlay de difuminado (MANTENIDO)
+  // Overlay de difuminado
   .video-overlay {
     position: absolute;
     top: 0;
@@ -64,7 +64,6 @@
   // Aseguramos que el texto del header tenga buen contraste
   header {
     .menu ul li a {
-      // Asegura que los enlaces sean visibles sobre el fondo oscuro del video
       text-shadow: 0 0 5px rgba(0, 0, 0, 0.8); // Añade una pequeña sombra al texto para contraste
     }
   }

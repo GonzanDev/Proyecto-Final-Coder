@@ -168,7 +168,6 @@
     }
 
     .item-shirt {
-      // --- CAMBIO 1: Aumentar separación visual con la imagen central ---
       margin-right: -100px;
       transform: rotate(-15deg);
 
@@ -178,7 +177,6 @@
     }
 
     .item-indio {
-      // --- CAMBIO 1: Imagen principal más grande ---
       width: 600px;
       height: 600px;
       transform: rotate(2deg);
@@ -202,7 +200,6 @@
     }
 
     .item-skay {
-      // --- CAMBIO 1: Aumentar separación visual con la imagen central ---
       margin-left: -100px;
       transform: rotate(12deg);
       z-index: 2;
@@ -265,7 +262,6 @@
         padding-left: 0;
       }
 
-      // --- CAMBIO 2: Aplicar sangría y jerarquía al primer párrafo ---
       p:first-child {
         border-left: 4px solid $color-accent; // Línea amarilla, para variar
         padding-left: 25px;

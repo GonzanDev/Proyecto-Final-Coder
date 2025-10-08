@@ -8,7 +8,7 @@
   min-height: 100vh;
   padding: 60px 0; // Padding general
 
-  // CRUCIAL para el efecto 3D: Define la perspectiva para las transformaciones de las tarjetas
+  // Define la perspectiva para las transformaciones de las tarjetas
   perspective: 1000px;
 
   // =========================================================
@@ -27,7 +27,7 @@
       color: $color-dark;
       background: $color-primary;
 
-      padding: 5px 10px; // Ligeramente ajustado
+      padding: 5px 10px;
       display: inline-block;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -88,8 +88,6 @@
     .info-content {
       position: relative;
       overflow: hidden;
-
-      // CAMBIO CLAVE 2: ELIMINAR TODA COMPENSACIÓN DE SKEW
       transform: none;
       transition: transform 0.5s ease-in-out;
       transform-style: preserve-3d;
@@ -168,7 +166,7 @@
       .info-content {
         transform: skewX(0deg) rotateY(5deg) scale(1.03); // Enderezamos y rotamos
 
-        // CRUCIAL: Rotamos la IMAGEN en dirección opuesta a la tarjeta para SIMULAR PROFUNDIDAD
+        // Rotamos la IMAGEN en dirección opuesta a la tarjeta para SIMULAR PROFUNDIDAD
         img {
           filter: grayscale(0%);
           transform: scale(1.07) rotateY(-5deg) rotateZ(-1deg); // Zoom ligero y rotación opuesta
