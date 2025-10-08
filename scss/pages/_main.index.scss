@@ -3,6 +3,10 @@
 @use "../utils/variables" as *;
 @use "sass:color";
 
+html {
+  background-color: transparent;
+}
+
 // =========================================================
 // ESTILOS GLOBALES DE VIDEO A PANTALLA COMPLETA
 // =========================================================
