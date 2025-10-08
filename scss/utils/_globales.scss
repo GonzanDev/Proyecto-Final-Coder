@@ -10,6 +10,7 @@ body {
   margin: 0; // Evita el scroll inicial del navegador
   overflow-x: hidden; // Evita scroll horizontal indeseado
   overscroll-behavior: none;
+  background-color: $color-dark; // Fondo oscuro por defecto
 }
 
 header {
@@ -27,9 +28,4 @@ main {
 footer {
   // Darle una altura fija o limitada
   flex-shrink: 0;
-}
-
-html {
-  scroll-behavior: smooth; // Suaviza el scroll al hacer clic en anclas
-  background-color: $color-dark; // Fondo oscuro por defecto
 }

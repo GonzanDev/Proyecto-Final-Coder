@@ -6,6 +6,7 @@
   background-color: $color-dark;
   min-height: 84.5vh;
   padding: 90px 15px;
+  overscroll-behavior-y: none;
 
   // --- El encabezado de la página ---
   .conciertos-header {

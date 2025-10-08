@@ -8,6 +8,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   overscroll-behavior: none;
+  background-color: #111111;
 }
 
 header {
@@ -22,11 +23,6 @@ main {
 
 footer {
   flex-shrink: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  background-color: #111111;
 }
 
 /* scss/components/_header.scss */
@@ -627,6 +623,7 @@ html {
   background-color: #111111;
   min-height: 84.5vh;
   padding: 90px 15px;
+  overscroll-behavior-y: none;
 }
 .conciertos .conciertos-header {
   text-align: center;
@@ -920,6 +917,12 @@ html {
 
 /* scss/utils/_media-queries.scss */
 @media screen and (max-width: 768px) {
+  html {
+    overscroll-behavior: none;
+  }
+  body {
+    overflow-x: hidden;
+  }
   /* ======================================================= */
   /* ============== HEADER Y NAVEGACIÓN MÓVIL ============== */
   /* ======================================================= */

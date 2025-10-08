@@ -6,6 +6,13 @@
 // BREAKPOINT 1: TABLETS Y MÓVILES GRANDES (Hasta 768px)
 // =========================================================
 @media screen and (max-width: 768px) {
+  html {
+    overscroll-behavior: none;
+  }
+  body {
+    // Evita el scroll horizontal indeseado
+    overflow-x: hidden;
+  }
   /* ======================================================= */
   /* ============== HEADER Y NAVEGACIÓN MÓVIL ============== */
   /* ======================================================= */
